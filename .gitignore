@@ -1,0 +1,9 @@
+venv/
+.env
+__pycache__/
+*.pyc
+.DS_Store
+.idea/
+*.sqlite3
+.env.*
+# End of .gitignore
