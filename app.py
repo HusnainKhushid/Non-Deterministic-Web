@@ -2,6 +2,8 @@ import os
 from flask import Flask, request, Response
 import google.generativeai as genai
 import logging
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
@@ -60,7 +62,7 @@ STRICT REQUIREMENTS:
    - If images are needed, use inline SVG placeholders only.
    - No template placeholders like {{mustache}}.
 """
-    model = genai.GenerativeModel("gemini-flash-latest")
+    model = genai.GenerativeModel("gemini-flash-lite-latest")
     response = model.generate_content(prompt)
     html = getattr(response, "text", None)
 
